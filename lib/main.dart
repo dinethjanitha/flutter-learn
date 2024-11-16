@@ -11,33 +11,58 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal[100],
+        backgroundColor: Colors.teal,
         body: SafeArea(
-            child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Container(
-              width: 100,
-              color: Colors.red,
-            ),
-            Column(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.yellow,
-                ),
-                Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.green[500],
-                )
-              ],
+          children: <Widget>[
+            const CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage("images/dineth.jpg"),
             ),
-            Container(
-              width: 100,
-              color: Colors.blue,
+            const Text(
+                style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontFamily: 'Pacifico'),
+                "Dineth Janitha "),
+            Text(
+                style: TextStyle(
+                  color: Colors.blueGrey[50],
+                  fontFamily: "SourceSans",
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+                "FLUTTER DEVELOPER"),
+            SizedBox(
+              width: 150,
+              height: 20,
+              child: Divider(
+                color: Colors.teal.shade100 ,
+
+              ),
+            ),
+            const Card(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              color: Colors.white,
+              child: ListTile(
+                leading:Icon(
+                  color: Colors.teal,
+                  Icons.phone,
+                ) ,
+                title:Text(style: TextStyle(color: Colors.teal), "+94719422044") ,
+              )
+            ),
+            const Card(
+              color: Colors.white,
+              margin:  EdgeInsets.all(10),
+              child: ListTile(
+                leading: Icon(color: Colors.teal, Icons.email),
+                title:Text(
+                    style: TextStyle(color: Colors.teal),
+                    "djanithak@gmail.com") ,
+              ),
             )
           ],
         )),
@@ -45,3 +70,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
